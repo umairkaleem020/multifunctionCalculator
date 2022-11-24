@@ -1,0 +1,59 @@
+using System;
+
+namespace advanceCalculator
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1, num2,num,newresult, result, choice;
+            string opr;
+            Console.WriteLine("Enter Number 1 :");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Operator +, -, *, / :");
+            opr = (Console.ReadLine());
+            Console.WriteLine("Enter Number 2 :");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Do you want result :   1");
+            Console.WriteLine("Do you calculate more enter :   2");
+            choice = Convert.ToInt32(Console.ReadLine());
+            if (choice == 1)
+            {
+                if (opr == "+")
+                {
+                    result = num1 + num2;
+                    Console.WriteLine(result);
+                }
+                if (opr == "-")
+                {
+                    result = num1 - num2;
+                    Console.WriteLine(result);
+                }
+
+            }
+
+            else if (choice == 2)
+
+            {
+                result = num1 - num2;
+                result = num1 + num2;
+                Console.WriteLine("Enter Operator +, -, *, / :");
+                opr = (Console.ReadLine());
+                Console.WriteLine("Enter Number :");
+                num = Convert.ToInt32(Console.ReadLine());
+                if (opr == "+")
+                {
+                    newresult = result + num;
+                    Console.WriteLine(newresult);
+                }
+                if (opr == "-")
+                {
+                    newresult = result - num;
+                    Console.WriteLine(newresult);
+                }
+            }
+            
+
+                }
+            }
+        }
